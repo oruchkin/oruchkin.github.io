@@ -3,34 +3,40 @@
 
     <head>
         <title>Google Advanced Search</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <style>
+            /* стиль полоски разделителя*/
             hr {
             border: 0;
             height: 1px;
             background: #ebebeb;
             }
 
-            input-field {
+            /* стиль поля ввода */
+            .input-field {
+                max-width: 550px;
+                border: 1px solid;
+                width: 99%;    
+                border-color: #adadad;
+                height:25px;    
+           }
 
-            }
-
-            /* важно */
-            .form-style-2{
-                max-width: 700px;
+            /* шрифт и набивка вокруг формы */
+            .form-style-1{
                 padding: 30px;
                 font: 13px Arial, Helvetica, sans-serif;
             }
             
-            /* важно */
-            .form-style-2 label{
+            /* block между label(растояния) */
+            label {
                 display: block;
-                margin: 0px 0px 15px 0px;
+                margin: 0px;
             }
 
             
-            /* важно */
-            .form-style-2 label > span{
+            /* стиль текста перед полем */
+            label > span{
                 width: 170px;
                 float: left;
                 padding-top: 4px;
@@ -38,12 +44,12 @@
             }
 
             
-            /* стиль кнопки */
-            .form-style-2 input[type=submit],
-            .form-style-2 input[type=button]{
+            /* стиль кнопки и ховера */
+            input[type=submit],
+            input[type=button]{
                 border: none;
                 padding: 8px 15px 8px 15px;
-                background: #00c3ff;
+                background: #4889f1;
                 color: #fff;
                 box-shadow: 1px 1px 4px #DADADA;
                 -moz-box-shadow: 1px 1px 4px #DADADA;
@@ -52,12 +58,22 @@
                 -webkit-border-radius: 3px;
                 -moz-border-radius: 3px;
             }
-            .form-style-2 input[type=submit]:hover,
-            .form-style-2 input[type=button]:hover{
-                background: #00b7ff;
+            input[type=submit]:hover,
+            input[type=button]:hover{
+                background: #3d81ef;
                 color: #fff;
             }
+            
+            /* стиль текста (дублируется span'ом) */
+            .textadvanced {
+                color: black;
+            }
 
+            .box {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            }
 
         </style>
 
@@ -72,30 +88,33 @@
         <hr class="hr">
 
         <!-- Форма поиска -->
-        <div class="form-style-2">
-            <p style="margin-bottom: 30px;">Find pages with...</p>
+        <div class="form-style-1">
+            <p style="margin-bottom: 30px; font-size: 16px;">Find pages with...</p>
             
             <form action="https://google.com/search">
-                <label for="all these words"><span class="textadvanced">all these words:</span> <input type="hidden" class="input-field" name="name" value="as_q">
-                    <input type="text" name="as_q">  </label>
+                
+                <label for="all these words"><span class="textadvanced">all these words:</span> <input type="hidden">
+                    <input type="text" name="as_q" class="input-field"> Type the important words: tri-colour rat terrier</label>
                 <br>
 
-                <label for="this exact word or phrase"><span class="textadvanced">this exact word or phrase:</span> <input type="hidden" class="input-field" id="tbm" name="tbm" value="isch">
-                    <input type="text" name="q">  </label>
+                <label for="this exact word or phrase"><span class="textadvanced">this exact word or phrase:</span> <input type="hidden" >
+                    <input type="text" name="as_epq" class="input-field">  </label>
                 <br>
 
-                <label for="any of these words"><span class="textadvanced">any of these words:</span> <input type="hidden" class="input-field" id="tbm" name="tbm" value="isch">
-                    <input type="text" name="q">  </label>
+                <label for="any of these words"><span class="textadvanced">any of these words:</span> <input type="hidden">
+                    <input type="text" name="as_oq" class="input-field">  </label>
                 <br>
 
-                <label for="none of these words"><span class="textadvanced">none of these words:</span> <input type="hidden" class="input-field" id="tbm" name="tbm" value="isch">
-                    <input type="text" name="q">  </label>
+                <label for="none of these words"><span class="textadvanced">none of these words:</span> <input type="hidden">
+                    <input type="text" name="as_eq" class="input-field">  </label>
                 <br>
                 
     
-                <br><label for="button"><input type="submit" value="Google Search"></label>
+                <br><label for="button" style="-"><input type="submit" value="Advanced Search"></label>
             </form>
         </div>
         
+
     </body>
 </html>
+
