@@ -17,7 +17,7 @@
             .input-field {
                 max-width: 550px;
                 border: 1px solid;
-                width: 45%;    
+                width: 55%;    
                 border-color: #adadad;
                 height:25px;    
            }
@@ -75,6 +75,13 @@
             justify-content: flex-end;
             }
 
+            @media (max-width: 1200px) {
+            .samp {
+                display: none;
+                }
+            }
+
+
         </style>
 
     </head>
@@ -94,19 +101,20 @@
             <form action="https://google.com/search">
                 
                     <label for="all these words"><span class="textadvanced">all these words:</span> <input type="hidden">
-                    <input type="text" name="as_q" class="input-field"> <samp>Type the important words: tri-colour rat terrier</samp></label>
+                    <input type="text" name="as_q" class="input-field"> <samp class="samp">&nbsp Type the important words: tri-colour rat terrier</samp></label>
                 <br>
 
                 <label for="this exact word or phrase"><span class="textadvanced">this exact word or phrase:</span> <input type="hidden" >
-                    <input type="text" name="as_epq" class="input-field">  </label>
+                    <input type="text" name="as_epq" class="input-field"> <samp class="samp">&nbsp Put exact words in quotes: "rat terrier"</samp> </label>
                 <br>
 
                 <label for="any of these words"><span class="textadvanced">any of these words:</span> <input type="hidden">
-                    <input type="text" name="as_oq" class="input-field">  </label>
+                    <input type="text" name="as_oq" class="input-field"> <samp class="samp">&nbsp Type OR between all the words you want: miniature OR standard
+</samp> </label>
                 <br>
 
                 <label for="none of these words"><span class="textadvanced">none of these words:</span> <input type="hidden">
-                    <input type="text" name="as_eq" class="input-field">  </label>
+                    <input type="text" name="as_eq" class="input-field"> <samp class="samp">&nbsp Put a minus sign just before words that you don't want</samp></label>
                 <br>
                 
     
