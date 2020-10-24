@@ -10,8 +10,10 @@
                 color: #545454;
                 font-size: 19px;
                 font-family: Arial, Helvetica, sans-serif;
-                font-weight: 100;
+                font-weight: 100;                
             }
+            
+
 
             .buttonmain {
                 border: 0.1px solid white;
@@ -21,7 +23,7 @@
                 margin: 1px;
                 line-height: 16px;
                 padding: 16px;
-                height: 100px;
+                height: 48px;
                 color: #5f6368;
                 background-color:#f2f2f2;
                 min-width: 54px;
@@ -30,6 +32,39 @@
                 user-select: none;
             }
 
+            .buttonmain:hover {
+                
+                color: black;
+                border: 1px solid #ddd;
+            }
+
+            .round {
+                width: 580px;
+                height: 30px;
+                border-radius: 26px;
+                border: 1px solid #ccc;
+                padding: 5px ;
+                outline: none;
+            }
+
+            .navstyle {
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;               
+            }
+            
+            .navstyle:hover {
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;
+                text-decoration: underline;
+                color:#757575
+                
+            }
+
+            a {
+                text-decoration: none;
+            }
         </style>
 
     </head>
@@ -39,18 +74,20 @@
             <div>
                 <nav>
                     <div class="topnav">
-                        <a href="image.html">Image search</a>
-                        <a href="advanced.html">Advanced search</a>
+                        <a href="image.html"><samp class="navstyle">Google Image search</samp></a>
+                        &nbsp
+                        <a href="advanced.html"><samp class="navstyle">Google Advanced search</samp></a>
                     </div>
                 </nav>
             </div>
         </header>
          
         <!--Форма поиска-->
-        <div style="text-align: center; margin-top: 340px;">
+        <div style="text-align: center; margin-top: 170px;">
             <img src="googlelogo.png" alt="logo" style="margin-bottom: 20px;">
             <form action="https://google.com/search">
-                    <input type="text" name="q" style="width: 400px;">
+                    <input type="text" name="q" class="round">
+                    <br>
                     <br>
                     <input type="submit" value="Google Search" class="buttonmain">
                     &nbsp;
